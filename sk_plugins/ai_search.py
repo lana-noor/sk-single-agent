@@ -15,7 +15,7 @@ SEARCH_INDEX_NAME = os.getenv("AZURE_SEARCH_INDEX")
 class AiSearch:
     @kernel_function(name="ai_search", description="")
     def ai_search(self, query: str) -> str:
-        """Search the TeamLab Guest Engagement Handbook for exhibit details, guest interaction tips, and operational guidance using Azure AI Search."""
+        """Search Mashreq Mena Fixed Income Fund Financial statements in 2022, 2023 and 2024 using Azure AI Search."""
         credential = AzureKeyCredential(AZURE_SEARCH_KEY)
         client = SearchClient(
             endpoint=AZURE_SEARCH_ENDPOINT,
@@ -26,16 +26,16 @@ class AiSearch:
             search_text=query,
             vector_queries=[
                 VectorizableTextQuery(
-                    text=query, k_nearest_neighbors=50, fields="vector"
+                    text=query, k_nearest_neighbors=50, fields="text_vector"
                 )
             ],
             query_type="semantic",
             semantic_configuration_name="my-semantic-config",
-            search_fields=["chunk"],
+            search_fields=["text"],
             top=7,
             include_total_count=True,
         )
-        retrieved_texts = [result.get("chunk") for result in results]
+        retrieved_texts = [result.get("text") for result in results]
         context_str = (
             "\n".join(retrieved_texts) if retrieved_texts else "No documents found."
         )

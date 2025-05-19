@@ -12,7 +12,8 @@ from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_
 # Import your workflow plugins
 from sk_plugins.web_search import GoogleWebSearch
 from sk_plugins.ai_search import AiSearch
- 
+from sk_plugins.generate_plot import FundPlotPlugin
+
 from dotenv import load_dotenv
 
 app = Flask(__name__)
@@ -45,6 +46,8 @@ history.add_system_message(system_prompt)
 
 kernel.add_plugin(AiSearch(), plugin_name="ai_search")
 kernel.add_plugin(GoogleWebSearch(), plugin_name="web_search")
+kernel.add_plugin(FundPlotPlugin(), plugin_name="fund_plot")
+
 
 
 

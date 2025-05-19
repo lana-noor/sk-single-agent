@@ -7,3 +7,5 @@ semantic-kernel
 azure-search-documents
 fastapi
 requests
+matplotlib
+chainlit
