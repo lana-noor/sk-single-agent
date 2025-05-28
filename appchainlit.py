@@ -14,7 +14,7 @@ from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_
 # Import your workflow plugins
 from sk_plugins.web_search import GoogleWebSearch
 from sk_plugins.ai_search import AiSearch
-from sk_plugins.generate_plot import FundPlotPlugin
+from sk_plugins.ai_search_index2 import AiSearchIndex2
  
 from dotenv import load_dotenv
  
@@ -67,6 +67,7 @@ def initialize_kernel() -> Tuple[Kernel, AzureChatCompletion]:
  
     try:
         # Register all workflow plugins with the kernel
+        kernel.add_plugin(AiSearchIndex2(), plugin_name="ai_search_index2")
         kernel.add_plugin(AiSearch(), plugin_name="ai_search")
         kernel.add_plugin(GoogleWebSearch(), plugin_name="web_search")
 
@@ -230,4 +231,19 @@ async def handle_message(message: cl.Message):
  
     response_text = str(result)  # Convert response to string
     historychainlit.add_message({"role": "assistant", "content": response_text})
-    await cl.Message(content=response_text).send()
+    #await cl.Message(content=response_text).send()
+    # If response is a base64 image, show it as an image element
+    if response_text.startswith("data:image/png;base64,"):
+        await cl.Message(
+            content="Here is the generated plot:",
+            elements=[
+                cl.Image(
+                    name="Financial Plot",
+                    display="inline",
+                    image=response_text  # this is the base64 image string
+                )
+            ]
+        ).send()
+    else:
+        # If it's a regular text response
+        await cl.Message(content=response_text).send()
