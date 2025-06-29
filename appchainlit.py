@@ -13,9 +13,10 @@ from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_
  
 # Import your workflow plugins
 from sk_plugins.web_search import GoogleWebSearch
-from sk_plugins.ai_search import AiSearch
-from sk_plugins.ai_search_index2 import AiSearchIndex2
- 
+from sk_plugins.ai_search_index import AiSearch
+from sk_plugins.ai_search_index_2 import AiSearch2
+from sk_plugins.api_seaworld_inventory import SeaworldInventory
+
 from dotenv import load_dotenv
  
 # -------------------------------
@@ -31,7 +32,7 @@ load_dotenv()
 # Retrieve Azure OpenAI configuration from environment variables
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4.1")
 AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview")
 AZURE_OPENAI_PROMPT = os.getenv("AZURE_OPENAI_PROMPT")
  
@@ -67,9 +68,10 @@ def initialize_kernel() -> Tuple[Kernel, AzureChatCompletion]:
  
     try:
         # Register all workflow plugins with the kernel
-        kernel.add_plugin(AiSearchIndex2(), plugin_name="ai_search_index2")
-        kernel.add_plugin(AiSearch(), plugin_name="ai_search")
+        kernel.add_plugin(AiSearch2(), plugin_name="ai_search_index_2")
+        kernel.add_plugin(AiSearch(), plugin_name="ai_search_index")
         kernel.add_plugin(GoogleWebSearch(), plugin_name="web_search")
+        kernel.add_plugin(SeaworldInventory(), plugin_name="api_seaworld_inventory")
 
         logging.info("All workflow plugins registered successfully.")
     except Exception as e:

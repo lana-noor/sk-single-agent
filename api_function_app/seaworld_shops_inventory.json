@@ -1,0 +1,236 @@
+[
+  {
+    "Item":"Dolphin Plush",
+    "Store":"Hamad’s Hideaway",
+    "Price":"126 AED",
+    "Color":"White",
+    "Description":"A white plush from Hamad’s Hideaway, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":25
+  },
+  {
+    "Item":"Dolphin Keychain",
+    "Store":"Hamad’s Hideaway",
+    "Price":"65 AED",
+    "Color":"Blue",
+    "Description":"A blue keychain from Hamad’s Hideaway, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Souvenir",
+    "Quantity":60
+  },
+  {
+    "Item":"Wave Hoodie",
+    "Store":"Hamad’s Hideaway",
+    "Price":"104 AED",
+    "Color":"Grey",
+    "Description":"A grey hoodie from Hamad’s Hideaway, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Apparel",
+    "Quantity":18
+  },
+  {
+    "Item":"Glow-in-the-dark Jellyfish Toy",
+    "Store":"Jellies",
+    "Price":"97 AED",
+    "Color":"Multicolor",
+    "Description":"A multicolor toy from Jellies, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":35
+  },
+  {
+    "Item":"Marine Puzzle Set",
+    "Store":"Jellies",
+    "Price":"112 AED",
+    "Color":"Blue",
+    "Description":"A blue puzzle from Jellies, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":40
+  },
+  {
+    "Item":"Shark Cap",
+    "Store":"Jellies",
+    "Price":"78 AED",
+    "Color":"Black",
+    "Description":"A black cap from Jellies, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Apparel",
+    "Quantity":22
+  },
+  {
+    "Item":"Pink Flamingo Plush",
+    "Store":"Flamingo Point",
+    "Price":"82 AED",
+    "Color":"Pink",
+    "Description":"A pink plush from Flamingo Point, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":28
+  },
+  {
+    "Item":"Tropical Themed Water Bottle",
+    "Store":"Flamingo Point",
+    "Price":"58 AED",
+    "Color":"Red",
+    "Description":"A red bottle from Flamingo Point, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Souvenir",
+    "Quantity":30
+  },
+  {
+    "Item":"Girls' SeaWorld T-shirt",
+    "Store":"Flamingo Point",
+    "Price":"90 AED",
+    "Color":"White",
+    "Description":"A white t-shirt from Flamingo Point, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Apparel",
+    "Quantity":26
+  },
+  {
+    "Item":"Manta Ray Plush",
+    "Store":"Sunken Treasures",
+    "Price":"119 AED",
+    "Color":"Grey",
+    "Description":"A grey plush from Sunken Treasures, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":19
+  },
+  {
+    "Item":"Treasure Chest Coin Bank",
+    "Store":"Sunken Treasures",
+    "Price":"66 AED",
+    "Color":"Brown",
+    "Description":"A brown bank from Sunken Treasures, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Souvenir",
+    "Quantity":50
+  },
+  {
+    "Item":"Ocean Explorer Binoculars",
+    "Store":"Sunken Treasures",
+    "Price":"138 AED",
+    "Color":"Blue",
+    "Description":"A blue binoculars from Sunken Treasures, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":0
+  },
+  {
+    "Item":"Penguin Plush",
+    "Store":"Polar Pier",
+    "Price":"88 AED",
+    "Color":"White",
+    "Description":"A white plush from Polar Pier, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":2
+  },
+  {
+    "Item":"Polar Bear Snow Globe",
+    "Store":"Polar Pier",
+    "Price":"142 AED",
+    "Color":"White",
+    "Description":"A white snow globe from Polar Pier, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Souvenir",
+    "Quantity":42
+  },
+  {
+    "Item":"Antarctic Explorer Hat",
+    "Store":"Polar Pier",
+    "Price":"53 AED",
+    "Color":"Black",
+    "Description":"A black hat from Polar Pier, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Apparel",
+    "Quantity":20
+  },
+  {
+    "Item":"Snowy Owl Plush",
+    "Store":"Arctic Trading Post",
+    "Price":"91 AED",
+    "Color":"White",
+    "Description":"A white plush from Arctic Trading Post, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":27
+  },
+  {
+    "Item":"Thermal SeaWorld Gloves",
+    "Store":"Arctic Trading Post",
+    "Price":"49 AED",
+    "Color":"Grey",
+    "Description":"A grey gloves from Arctic Trading Post, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Apparel",
+    "Quantity":23
+  },
+  {
+    "Item":"Arctic Animal Sticker Set",
+    "Store":"Arctic Trading Post",
+    "Price":"34 AED",
+    "Color":"Multicolor",
+    "Description":"A multicolor sticker from Arctic Trading Post, great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Souvenir",
+    "Quantity":55
+  },
+  {
+    "Item":"ROV Explorer Drone Toy",
+    "Store":"Launch Bay Supplies & Co.",
+    "Price":"145 AED",
+    "Color":"Black",
+    "Description":"A black toy from Launch Bay Supplies & Co., great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":14
+  },
+  {
+    "Item":"Underwater Mission Patch",
+    "Store":"Launch Bay Supplies & Co.",
+    "Price":"39 AED",
+    "Color":"Red",
+    "Description":"A red patch from Launch Bay Supplies & Co., great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Souvenir",
+    "Quantity":36
+  },
+  {
+    "Item":"SeaBot Action Figure",
+    "Store":"Launch Bay Supplies & Co.",
+    "Price":"132 AED",
+    "Color":"Blue",
+    "Description":"A blue figure from Launch Bay Supplies & Co., great for kids and themed with SeaWorld Abu Dhabi style.",
+    "Category":"Toy",
+    "Quantity":0
+  },
+    {
+    "Item": "Arctic Fox Plush",
+    "Store": "Arctic Trading Post",
+    "Price": "110 AED",
+    "Color": "White",
+    "Description": "A soft arctic fox plush from the Arctic Trading Post, perfect for snuggling on chilly days.",
+    "Category": "Toy",
+    "Quantity": 35
+  },
+  {
+    "Item": "Flamingo Bubble Wand",
+    "Store": "Flamingo Point",
+    "Price": "45 AED",
+    "Color": "Pink",
+    "Description": "A flamingo-shaped bubble wand from Flamingo Point, bringing tropical fun for all ages.",
+    "Category": "Toy",
+    "Quantity": 42
+  },
+  {
+    "Item": "Penguin Puzzle",
+    "Store": "Polar Pier",
+    "Price": "78 AED",
+    "Color": "Black and White",
+    "Description": "A 3D penguin puzzle from Polar Pier, combining fun and learning with an Antarctic twist.",
+    "Category": "Toy",
+    "Quantity": 29
+  },
+  {
+    "Item": "Jellyfish Light-Up Ball",
+    "Store": "Jellies",
+    "Price": "52 AED",
+    "Color": "Blue",
+    "Description": "A bouncy, light-up ball shaped like a jellyfish from Jellies, glowing with every bounce.",
+    "Category": "Toy",
+    "Quantity": 50
+  },
+  {
+    "Item": "Manta Ray Glider",
+    "Store": "Sunken Treasures",
+    "Price": "95 AED",
+    "Color": "Navy Blue",
+    "Description": "A soft-foam manta ray glider from Sunken Treasures, designed for high-flying indoor and outdoor fun.",
+    "Category": "Toy",
+    "Quantity": 20
+  }
+]

@@ -7,19 +7,18 @@ from azure.search.documents.models import VectorizableTextQuery
 
 load_dotenv()
 
-AZURE_SEARCH_ENDPOINT = os.getenv("AZURE_SEARCH_ENDPOINT")
-AZURE_SEARCH_KEY = os.getenv("AZURE_SEARCH_API_KEY")
-SEARCH_INDEX_NAME = os.getenv("AZURE_SEARCH_INDEX")
+AZURE_SEARCH_ENDPOINT_2 = os.getenv("AZURE_SEARCH_ENDPOINT_2")
+AZURE_SEARCH_KEY_2 = os.getenv("AZURE_SEARCH_API_KEY_2")
+SEARCH_INDEX_NAME_2 = os.getenv("AZURE_SEARCH_INDEX_2")
 
-
-class AiSearch:
+class AiSearch2:
     @kernel_function(name="ai_search", description="")
     def ai_search(self, query: str) -> str:
-        """Search Mashreq Mena Fixed Income Fund Financial statements in 2022, 2023 and 2024 using Azure AI Search."""
-        credential = AzureKeyCredential(AZURE_SEARCH_KEY)
+        """Search Seaworld data on encounters and experiences at the Abu Dhabi Park using Azure AI Search."""
+        credential = AzureKeyCredential(AZURE_SEARCH_KEY_2)
         client = SearchClient(
-            endpoint=AZURE_SEARCH_ENDPOINT,
-            index_name=SEARCH_INDEX_NAME,
+            endpoint=AZURE_SEARCH_ENDPOINT_2,
+            index_name=SEARCH_INDEX_NAME_2,
             credential=credential,
         )
         results = client.search(
