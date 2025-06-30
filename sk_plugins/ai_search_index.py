@@ -15,7 +15,7 @@ SEARCH_INDEX_NAME = os.getenv("AZURE_SEARCH_INDEX")
 class AiSearch:
     @kernel_function(name="ai_search", description="")
     def ai_search(self, query: str) -> str:
-        """Search Seaworld data on encounters and experiences at the park. Use for general information about SeaWorld."""
+        """Search Water Theme Park data on encounters and experiences at the park. Use for general information about the Water Park."""
         credential = AzureKeyCredential(AZURE_SEARCH_KEY)
         client = SearchClient(
             endpoint=AZURE_SEARCH_ENDPOINT,

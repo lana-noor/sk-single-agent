@@ -6,10 +6,10 @@ from semantic_kernel.functions import kernel_function
 load_dotenv()
 URL = os.getenv("URL_retrieve_data")
 
-class SeaworldInventory:
+class Inventory:
     @kernel_function(
         name="get_inventory",
-        description="Retrieve the full SeaWorld Abu Dhabi shops inventory as a JSON object."
+        description="Retrieve the full Water Theme Park shops inventory as a JSON object."
     )
     def get_inventory(self) -> list:
         """

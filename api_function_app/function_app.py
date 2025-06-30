@@ -5,12 +5,12 @@ import logging
 
 app = func.FunctionApp()
 
-@app.route(route="seaworld_shops_inventory", auth_level=func.AuthLevel.ANONYMOUS)
+@app.route(route="shops_inventory", auth_level=func.AuthLevel.ANONYMOUS)
 def seaworld_shops_inventory_final(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Serving Seaworld Shops Inventory JSON data.')
+    logging.info('Serving Shops Inventory JSON data.')
 
     # Always use the path relative to this script
-    json_path = os.path.join(os.path.dirname(__file__), "seaworld_shops_inventory.json")
+    json_path = os.path.join(os.path.dirname(__file__), "shops_inventory.json")
 
     try:
         with open(json_path, "r", encoding="utf-8") as f:
@@ -28,7 +28,7 @@ def seaworld_shops_inventory_final(req: func.HttpRequest) -> func.HttpResponse:
         )
 
 
-@app.route(route="seaworld_shops_inventory_final", auth_level=func.AuthLevel.ANONYMOUS)
+@app.route(route="shops_inventory_final", auth_level=func.AuthLevel.ANONYMOUS)
 def seaworld_shops_inventory_final(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 

@@ -15,7 +15,7 @@ from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_
 from sk_plugins.web_search import GoogleWebSearch
 from sk_plugins.ai_search_index import AiSearch
 from sk_plugins.ai_search_index_2 import AiSearch2
-from sk_plugins.api_seaworld_inventory import SeaworldInventory
+from sk_plugins.api_inventory import Inventory
 
 from dotenv import load_dotenv
  
@@ -71,7 +71,7 @@ def initialize_kernel() -> Tuple[Kernel, AzureChatCompletion]:
         kernel.add_plugin(AiSearch2(), plugin_name="ai_search_index_2")
         kernel.add_plugin(AiSearch(), plugin_name="ai_search_index")
         kernel.add_plugin(GoogleWebSearch(), plugin_name="web_search")
-        kernel.add_plugin(SeaworldInventory(), plugin_name="api_seaworld_inventory")
+        kernel.add_plugin(Inventory(), plugin_name="api_inventory")
 
         logging.info("All workflow plugins registered successfully.")
     except Exception as e:
