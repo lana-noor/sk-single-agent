@@ -1,4 +1,4 @@
-# Single Agent Semantic Kernel Demo - SeaWorld AI Assistant Example 
+# Single Agent Semantic Kernel Demo 
 ---
 
 ## Overview
