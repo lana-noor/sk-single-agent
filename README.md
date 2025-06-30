@@ -3,7 +3,7 @@
 
 ## Overview
 
-This repository demonstrates a modular, extensible AI agent built with Semantic Kernel, Azure OpenAI, and Chainlit to support advanced question-answering, search, and workflow automation for SeaWorld Abu Dhabi.  
+This repository demonstrates a modular, extensible AI agent built with Semantic Kernel, Azure OpenAI, and Chainlit to support advanced question-answering, search, and workflow automation for SeaWorld.  
 It features a plugin-based architecture and real-time retrieval of data from both internal knowledge bases and external APIs.
 
 The repo includes:
@@ -34,7 +34,7 @@ This includes:
 See the diagram below for a full overview of the app flow, including data pipelines, retrieval logic, and plugin orchestration.
 ![LinkedIn Semantic Kernel Single Agent REPO Aval (1)](https://github.com/user-attachments/assets/ecb61f50-ea84-492e-a285-d09069c68808)
 
-This demo showcases a modular Retrieval-Augmented Generation (RAG) application for SeaWorld Abu Dhabi, built with Semantic Kernel (pre-Agent Framework, [v0.8.x](https://github.com/microsoft/semantic-kernel/releases/tag/0.8.7)), Chainlit for the frontend, and a set of custom plugins for data retrieval and orchestration.
+This demo showcases a modular Retrieval-Augmented Generation (RAG) application for SeaWorld, built with Semantic Kernel (pre-Agent Framework, [v0.8.x](https://github.com/microsoft/semantic-kernel/releases/tag/0.8.7)), Chainlit for the frontend, and a set of custom plugins for data retrieval and orchestration.
 This architecture allows the agent to dynamically answer user questions by selecting the most relevant data source: combining real-time shop inventory, map and location details (from LLM-verbalized map data), park experience information, and public web data—all orchestrated seamlessly via plugins and Semantic Kernel.
 
 ### Key architectural details
