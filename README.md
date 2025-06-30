@@ -32,7 +32,7 @@ This includes:
 
 ### Architecture - Full Agentic Pipeline & Retrieval Orchestration 
 See the diagram below for a full overview of the app flow, including data pipelines, retrieval logic, and plugin orchestration.
-![LinkedIn Semantic Kernel Single Agent REPO Aval (1)](https://github.com/user-attachments/assets/ecb61f50-ea84-492e-a285-d09069c68808)
+![LinkedIn Semantic Kernel Single Agent REPO Aval (2)](https://github.com/user-attachments/assets/c237f641-a9de-4506-a7de-1adee279a540)
 
 This demo showcases a modular Retrieval-Augmented Generation (RAG) application for a Water Theme Park, built with Semantic Kernel (pre-Agent Framework, [v0.8.x](https://github.com/microsoft/semantic-kernel/releases/tag/0.8.7)), Chainlit for the frontend, and a set of custom plugins for data retrieval and orchestration.
 This architecture allows the agent to dynamically answer user questions by selecting the most relevant data source: combining real-time shop inventory, map and location details (from LLM-verbalized map data), park experience information, and public web data—all orchestrated seamlessly via plugins and Semantic Kernel.
