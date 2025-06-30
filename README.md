@@ -81,10 +81,10 @@ python -m venv .venv
 # Install required Python dependencies
 pip install -r requirements.txt
 
-# Log in to Azure (replace tenant ID if needed)
+# Log in to Azure with tenant ID 
 az login --tenant "<tenant-id>"
 
-# To run the CLI/terminal interface:
+# To run the app with CLI/terminal interface:
 python appchainlit.py
 
 # To launch the Chainlit web UI:
@@ -112,7 +112,7 @@ uv venv
 # Install dependencies
 uv pip install -r requirements.txt
 
-# Log in to Azure (replace tenant ID if needed)
+# Log in to Azure with Tenant ID 
 az login --tenant "<tenant-id>"
 
 # Install Azure Functions Core Tools if not already installed
