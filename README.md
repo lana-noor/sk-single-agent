@@ -1,9 +1,9 @@
-# Single Agent Semantic Kernel Demo - SeaWorld AI Assistant Example 
+# Single Agent Semantic Kernel Demo 
 ---
 
 ## Overview
 
-This repository demonstrates a modular, extensible AI agent built with Semantic Kernel, Azure OpenAI, and Chainlit to support advanced question-answering, search, and workflow automation for SeaWorld Abu Dhabi.  
+This repository demonstrates a modular, extensible AI agent built with Semantic Kernel, Azure OpenAI, and Chainlit to support advanced question-answering, search, and workflow automation for the Water Theme Park.  
 It features a plugin-based architecture and real-time retrieval of data from both internal knowledge bases and external APIs.
 
 The repo includes:
@@ -17,7 +17,7 @@ The repo includes:
 The core of this solution is a single-agent AI assistant that routes user queries to the most relevant data source using Semantic Kernel plugins.  
 This includes:
 
-- Azure AI Search for SeaWorld Experience Guide (exhibits, attractions, rides, amenities, and more).
+- Azure AI Search for Water Theme Park Experience Guide (exhibits, attractions, rides, amenities, and more).
 - Azure AI Search for map/location-based queries (using LLM-verbalized map data).
 - Function app plugin for live shop inventory (retrieves data from an external JSON API).
 - Web search plugin for public, real-time data.
@@ -34,7 +34,7 @@ This includes:
 See the diagram below for a full overview of the app flow, including data pipelines, retrieval logic, and plugin orchestration.
 ![LinkedIn Semantic Kernel Single Agent REPO Aval (1)](https://github.com/user-attachments/assets/ecb61f50-ea84-492e-a285-d09069c68808)
 
-This demo showcases a modular Retrieval-Augmented Generation (RAG) application for SeaWorld Abu Dhabi, built with Semantic Kernel (pre-Agent Framework, [v0.8.x](https://github.com/microsoft/semantic-kernel/releases/tag/0.8.7)), Chainlit for the frontend, and a set of custom plugins for data retrieval and orchestration.
+This demo showcases a modular Retrieval-Augmented Generation (RAG) application for a Water Theme Park, built with Semantic Kernel (pre-Agent Framework, [v0.8.x](https://github.com/microsoft/semantic-kernel/releases/tag/0.8.7)), Chainlit for the frontend, and a set of custom plugins for data retrieval and orchestration.
 This architecture allows the agent to dynamically answer user questions by selecting the most relevant data source: combining real-time shop inventory, map and location details (from LLM-verbalized map data), park experience information, and public web data—all orchestrated seamlessly via plugins and Semantic Kernel.
 
 ### Key architectural details
@@ -49,7 +49,7 @@ This architecture allows the agent to dynamically answer user questions by selec
   Data source plugins (web search, shop inventory API, map index, and experience guide index) are implemented as Python classes in the `sk_plugins` folder. These plugins are registered and managed within the main app script.
 
 - **API Plugin / Function App:**  
-  The `api_seaworld_inventory` plugin retrieves live shop inventory data by making an HTTPS call to a function app endpoint. The function app code and inventory data reside in the `api_function_app/` folder. The function is deployed to Azure Functions, providing a public URL for real-time data access.
+  The `api_inventory` plugin retrieves live shop inventory data by making an HTTPS call to a function app endpoint. The function app code and inventory data reside in the `api_function_app/` folder. The function is deployed to Azure Functions, providing a public URL for real-time data access.
 
 - **Chat History:**  
   For this demo, Cosmos DB is not used. Chat history is managed out-of-the-box by Semantic Kernel's in-memory utilities.
@@ -62,9 +62,9 @@ This architecture allows the agent to dynamically answer user questions by selec
 
 - **Ingestion Pipelines:**  
   - **Push API for Multimodal Map Data:**  
-    The SeaWorld map, as a multimodal (image + text) asset, is processed using the [mm_doc_proc pipeline](https://github.com/samelhousseini/mm_doc_proc/tree/main). The PDF map is verbalized (image analysis and description) using GPT-4.1, converted to structured JSON, and indexed in Azure AI Search.
+    The Water Theme Park map, as a multimodal (image + text) asset, is processed using the [mm_doc_proc pipeline](https://github.com/samelhousseini/mm_doc_proc/tree/main). The PDF map is verbalized (image analysis and description) using GPT-4.1, converted to structured JSON, and indexed in Azure AI Search.
   - **Pull API (Indexer) for Text Data:**  
-    Text-based data, such as the SeaWorld Experience Guide, is ingested and indexed using the [integrated vectorization notebook](https://github.com/Azure/azure-search-vector-samples/tree/main/demo-python/code/integrated-vectorization). This automates chunking and indexing of PDFs from Azure Blob Storage.
+    Text-based data, such as the Water Theme Park Experience Guide, is ingested and indexed using the [integrated vectorization notebook](https://github.com/Azure/azure-search-vector-samples/tree/main/demo-python/code/integrated-vectorization). This automates chunking and indexing of PDFs from Azure Blob Storage.
 
 ---
 
@@ -93,7 +93,7 @@ chainlit run appchainlit.py
 
 ## 2. Deploy Azure Function App for Inventory Retrieval (api_function_app/)
 This serverless Azure Function exposes shop inventory data via a REST API.
-It simulates retrieving real-time data from an external service or third-party API, allowing the agent to provide up-to-date information about available toys, souvenirs, prices, and stock in SeaWorld Abu Dhabi shops.
+It simulates retrieving real-time data from an external service or third-party API, allowing the agent to provide up-to-date information about available toys, souvenirs, prices, and stock in the themepark shops.
 
 Why is this useful?
 - Allows demos to showcase agent-driven external API orchestration.
@@ -124,7 +124,7 @@ func --version
 func init --worker-runtime python
 
 # Create a new HTTP-triggered function (if not already done)
-func new --name seaworld_shops_inventory --template "HTTP trigger" --authlevel "anonymous"
+func new --name <function-name> --template "HTTP trigger" --authlevel "anonymous"
 
 # Start the function app locally for testing
 func start
