@@ -93,7 +93,7 @@ chainlit run appchainlit.py
 
 ## 2. Deploy Azure Function App for Inventory Retrieval (api_function_app/)
 This serverless Azure Function exposes shop inventory data via a REST API.
-It simulates retrieving real-time data from an external service or third-party API, allowing the agent to provide up-to-date information about available toys, souvenirs, prices, and stock in SeaWorld Abu Dhabi shops.
+It simulates retrieving real-time data from an external service or third-party API, allowing the agent to provide up-to-date information about available toys, souvenirs, prices, and stock in the themepark shops.
 
 Why is this useful?
 - Allows demos to showcase agent-driven external API orchestration.
