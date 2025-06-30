@@ -1,4 +1,4 @@
-# SeaWorld Abu Dhabi AI Agent – Single Agent Semantic Kernel Demo
+# Single Agent Semantic Kernel Demo - SeaWorld AI Assistant Example 
 ---
 
 ## Overview
