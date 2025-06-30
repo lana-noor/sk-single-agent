@@ -6,7 +6,7 @@ import logging
 app = func.FunctionApp()
 
 @app.route(route="seaworld_shops_inventory", auth_level=func.AuthLevel.ANONYMOUS)
-def seaworld_shops_inventory_new(req: func.HttpRequest) -> func.HttpResponse:
+def seaworld_shops_inventory_final(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Serving Seaworld Shops Inventory JSON data.')
 
     # Always use the path relative to this script
@@ -25,4 +25,26 @@ def seaworld_shops_inventory_new(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(
             f"Error loading inventory data: {e}",
             status_code=500
+        )
+
+
+@app.route(route="seaworld_shops_inventory_final", auth_level=func.AuthLevel.ANONYMOUS)
+def seaworld_shops_inventory_final(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a request.')
+
+    name = req.params.get('name')
+    if not name:
+        try:
+            req_body = req.get_json()
+        except ValueError:
+            pass
+        else:
+            name = req_body.get('name')
+
+    if name:
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+    else:
+        return func.HttpResponse(
+             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             status_code=200
         )

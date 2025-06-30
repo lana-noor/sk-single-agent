@@ -14,6 +14,7 @@ api_function_app/bin/
 api_function_app/obj/
 api_function_app/.python_packages/
 api_function_app/local.settings.json
+api_function_app/host.json
 
 # Ignore compiled Python files
 __pycache__/
