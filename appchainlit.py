@@ -31,7 +31,7 @@ load_dotenv()
  
 # Retrieve Azure OpenAI configuration from environment variables
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_ENDPOINT_OLD = os.getenv("AZURE_OPENAI_ENDPOINT_OLD")
 AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4.1")
 AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview")
 AZURE_OPENAI_PROMPT = os.getenv("AZURE_OPENAI_PROMPT")
@@ -57,7 +57,7 @@ def initialize_kernel() -> Tuple[Kernel, AzureChatCompletion]:
         chat_completion = AzureChatCompletion(
             deployment_name=AZURE_OPENAI_DEPLOYMENT,
             api_key=AZURE_OPENAI_API_KEY,
-            base_url=AZURE_OPENAI_ENDPOINT,
+            base_url=AZURE_OPENAI_ENDPOINT_OLD,
             api_version=AZURE_OPENAI_API_VERSION
         )
         kernel.add_service(chat_completion)
